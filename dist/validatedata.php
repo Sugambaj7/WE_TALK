@@ -28,9 +28,8 @@ if(!empty($user_name) && !empty($user_phn_num)  && !empty($user_addr)  && !empty
             $extensions = ['png','jpeg','jpg'];
             if(in_array($image_ext,$extensions) === true){
                 $time = time();
-
                 $new_image_name = $time.$image_name;
-                if(move_uploaded_file($tmp_name,"uploads/user_image".$new_image_name)){
+                if(move_uploaded_file($tmp_name,"./uploads/user_image/".$new_image_name)){
                     $status = "Active now";
                     $random_id = rand(time(),10000000);
                     $query2 = "INSERT INTO users_registration (unique_id, user_name, user_phone, user_address, user_email, user_password, user_image, status) VALUES('{$random_id}', '{$user_name}', '{$user_phn_num}', '{$user_addr}', '{$user_email}', '{$user_pass}', '{$new_image_name}', '{$status}')";
