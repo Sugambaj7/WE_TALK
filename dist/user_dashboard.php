@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="../assets/css/userdashboard.css">
-    <link rel="stylesheet" href="../fonts-6/all.css">
+    <link rel="stylesheet" href="./fonts-6/css/all.css">
     <script src="https://kit.fontawesome.com/e3a0095685.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 </head>

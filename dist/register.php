@@ -14,7 +14,7 @@
         </div>
         <div class=" flex justify-center items-center w-screen h-screen">
             <div class="signup border border-lid border-black" >
-                <form class="px-12 py-12"  name="user_register_form" method="POST"  enctype="multipart/form-data">
+                <form class="px-12 py-12"  name="user_register_form" method="POST" autocomplete="offgit" enctype="multipart/form-data">
                         <div class="flex flex-col justify-center items-center pb-8">
                             <div>
                                 <h1 class="underline">Create Account</h1>

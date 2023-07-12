@@ -24,11 +24,15 @@
                                 <div class="mb-3">
                                     <h1 class="text-2xl">Login</h1>
                                 </div>
+
+                                <div class="error-txt">
+
+                                </div>
                                 <div>
                                     <label for="">Email</label>
                                </div>
                                <div>
-                                    <input type="text" placeholder="Enter your email" class="pl-2 border border-black w-56 py-0.5">
+                                    <input type="text" name = "user_email" placeholder="Enter your email" class="pl-2 border border-black w-56 py-0.5">
                                </div>
                             </div>
                             <div>
@@ -36,10 +40,10 @@
                                     <label for="">Password</label>
                                </div>
                                <div>
-                                    <input type="password" placeholder="Enter your password" class="pl-2 border border-black w-56 py-0.5">
+                                    <input type="password" name = "user_pass" placeholder="Enter your password" class="pl-2 border border-black w-56 py-0.5">
                                </div>
                             </div>
-                            <div class="bg-green-500 flex justify-center  my-0.5 mt-4" >
+                            <div class="button bg-green-500 flex justify-center  my-0.5 mt-4" >
                                     <input class="text-white pt-1 pb-1" type="submit" value="Continue to Chat">
                             </div>
                             <div class="">
@@ -60,7 +64,7 @@
         </div>
 
     </div>
-    <script src="./register.js"></script>
+    <script src="./login.js"></script>
     
 </body>
 </html>
