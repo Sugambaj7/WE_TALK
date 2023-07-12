@@ -1,0 +1,19 @@
+*{
+    margin: 0px 0px;
+    padding:  0px 0px;
+}
+#search-bar-div{
+    width: 100%;
+}
+#search-bar{
+    width: 100%;
+}
+#user-list::-webkit-scrollbar {
+    width: 0px;
+}
+.fas{
+    color:#468669;
+}
+.fas .offline{
+    color:#ccc;
+}
