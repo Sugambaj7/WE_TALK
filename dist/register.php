@@ -22,6 +22,9 @@
                             <div>
                                 <span> user your email for registration</span>
                             </div>
+                            <div class="error-txt">
+                                This is an error message!
+                            </div>
                         </div>
                         
                         <div>
@@ -83,7 +86,7 @@
                             <span class="error_msg" id="user_image_Err"></span>
                         </div>
                         <div class="button mt-2">
-                            <input class=" border border-black w-56 py-0.5" type="submit" value="Continue to Chat" required>
+                            <input class=" border border-black w-56 py-0.5" type="submit" value="Continue to Chat">
                         </div>
                         <div>
                             <a class="underline text-blue-700" href="">Already signed up?Login</a>
