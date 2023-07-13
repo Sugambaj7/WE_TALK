@@ -89,7 +89,7 @@
                             <input class=" border border-black w-56 py-0.5" type="submit" value="Continue to Chat">
                         </div>
                         <div>
-                            <a class="underline text-blue-700" href="">Already signed up?Login</a>
+                            <a href="./login.php" class="underline text-blue-700">Already signed up?Login</a>
                         </div>
                 </form>
             </div>

@@ -5,7 +5,7 @@
 #search-bar-div{
     width: 100%;
 }
-#search-bar{
+#search-bar-div input{
     width: 100%;
 }
 #user-list::-webkit-scrollbar {

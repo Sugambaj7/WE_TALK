@@ -47,7 +47,7 @@
                                     <input class="text-white pt-1 pb-1" type="submit" value="Continue to Chat">
                             </div>
                             <div class="">
-                                <a class="underline text-blue-700" href="#">Not signed up yet? Signup now</a>
+                                <a class="underline text-blue-700" href="./register.php">Not signed up yet? Signup now</a>
                             </div>
                             <div>
                                 <a class="underline text-blue-700" href="#">Forgot Password?</a>

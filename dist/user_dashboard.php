@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="../assets/css/userdashboard.css">
+    <link rel="stylesheet" href="../assets/css/user-dashboard.css">
     <link rel="stylesheet" href="./fonts-6/css/all.css">
     <script src="https://kit.fontawesome.com/e3a0095685.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
@@ -37,7 +37,7 @@
         <div class=" flex justify-center items-center w-screen h-screen">
             <div class="border border-solid border-black" >
                 <div class="user_dashboard">
-                    <div class="flex flex-col">
+                    <div class="site-users flex flex-col">
                         <div class="flex flex-row">
                             <div>
                                 <img class="w-14 h-14 rounded-full"  src="./uploads/user_image/<?php echo $row["user_image"]?>" alt="" srcset="">
@@ -63,176 +63,17 @@
                             </div>
                             <div id="search-content" class=" flex flex-row">
                                 <div id="search-bar-div">
-                                    <input id="search-bar" class="border border-solid border-black outline-none" type="text" placeholder="Enter a name to search">
+                                    <input class="border border-solid border-black outline-none" type="text" placeholder="Enter a name to search">
                                 </div>
                                 <div class="bg-green-400 flex justify-center items-center" id="search-btn">
-                                    <i class="fa-solid fa-magnifying-glass text-center h-5 w-10"></i>
+                                    <button>
+                                        <i class="fa-solid fa-magnifying-glass text-center h-5 w-10"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div  id="user-list" class="flex flex-col max-h-60 overflow-y-auto">
-                            <div>
-                            <a href="">
-                                <div class="flex flex-row">
-                                        <div>img</div>
-                                        <div class="flex flex-col">
-                                            <div>
-                                                user1
-                                            </div>
-                                            <div>
-                                                user1:Message
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <i class="fas fa-circle"></i>
-                                        </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="flex flex-row">
-                                            <div>img</div>
-                                            <div class="flex flex-col">
-                                                <div>
-                                                    user1
-                                                </div>
-                                                <div>
-                                                    user1:Message
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-circle"></i>
-                                            </div>
-                                        </div>
-                                    </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="flex flex-row">
-                                            <div>img</div>
-                                            <div class="flex flex-col">
-                                                <div>
-                                                    user1
-                                                </div>
-                                                <div>
-                                                    user1:Message
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-circle"></i>
-                                            </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="flex flex-row">
-                                            <div>img</div>
-                                            <div class="flex flex-col">
-                                                <div>
-                                                    user1
-                                                </div>
-                                                <div>
-                                                    user1:Message
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-circle"></i>
-                                            </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="flex flex-row">
-                                            <div>img</div>
-                                            <div class="flex flex-col">
-                                                <div>
-                                                    user1
-                                                </div>
-                                                <div>
-                                                    user1:Message
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-circle"></i>
-                                            </div>
-                                    </div>
-                                </a>
-                            </div>
-                                <div>
-                                 <a href="">
-                                        <div class="flex flex-row">
-                                                <div>img</div>
-                                                <div class="flex flex-col">
-                                                    <div>
-                                                        user1
-                                                    </div>
-                                                    <div>
-                                                        user1:Message
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-circle"></i>
-                                                </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            <div>
-                                <a href="">
-                                        <div class="flex flex-row">
-                                                <div>img</div>
-                                                <div class="flex flex-col">
-                                                    <div>
-                                                        user1
-                                                    </div>
-                                                    <div>
-                                                        user1:Message
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-circle"></i>
-                                                </div>
-                                        </div>
-                                    </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="flex flex-row">
-                                            <div>img</div>
-                                            <div class="flex flex-col">
-                                                <div>
-                                                    user1
-                                                </div>
-                                                <div>
-                                                    user1:Message
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-circle"></i>
-                                            </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="flex flex-row">
-                                            <div>img</div>
-                                            <div class="flex flex-col">
-                                                <div>
-                                                    user1
-                                                </div>
-                                                <div>
-                                                    user1:Message
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-circle"></i>
-                                            </div>
-                                    </div>
-                                </a>
-                            </div>
+                        <div id="users-list" class=" flex flex-col max-h-60 overflow-y-auto">
+                            
                         </div>
                     </div>
                 </div>
@@ -243,5 +84,6 @@
         </div>
 
     </div>
+    <script src="./users.js"></script>
 </body>
 </html>
