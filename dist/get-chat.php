@@ -7,7 +7,7 @@
          $output = "";
 
          $query = "SELECT * FROM messages
-         LEFT JOIN users_registration ON users_registration.unique_id = messages.incoming_msg_id
+         LEFT JOIN users_registration ON users_registration.unique_id = messages.outgoing_msg_id
          WHERE
          (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id}) OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id ASC";
          $result = mysqli_query($conn, $query);

@@ -16,7 +16,7 @@
                     $row2 = mysqli_fetch_assoc($result2);
                     $output = "";
                     $output.='<div>
-                        <a href="">
+                        <a href="./chats.php?user_id='.$row2['unique_id'].'">
                             <div class="flex flex-row">
                                     <div class="w-10 h-10 border border-solid border-black">
                                         <img src="./uploads/user_image/'. $row2['user_image'] . '"  alt="">
@@ -26,7 +26,7 @@
                                            <span>'.$row2['user_name'].'</span>
                                         </div>
                                         <div>
-                                            <p>eThis is a test messag</p>
+                                            <p>This is a test message</p>
                                         </div>
                                     </div>
                                     <div>
