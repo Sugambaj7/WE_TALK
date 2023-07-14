@@ -3,7 +3,7 @@
     include '../connection/connection.php';
 
     $outgoing_id = $_SESSION['unique_id'];
-    $query = "SELECT * FROM users_registration";
+    $query = "SELECT * FROM users_registration WHERE NOT unique_id = {$outgoing_id} ";
     $result = mysqli_query($conn, $query);
     $output = "";
 
