@@ -1,41 +1,71 @@
 <?php
-
+    session_start();
     include '../connection/connection.php';
+
+    
     $keyword = mysqli_real_escape_string($conn, $_POST['searchTerm']);
 
     function linearSearch($keyword,$data){
+        $outgoing_id = $_SESSION['unique_id'];//use for dynamic message viewing
         $found = false;
         for($i=0;$i<count($data);$i++){
             if($data[$i] == $keyword){
                 $found = true;
-               if($found == true){
+               if($found == true){//verified that keyword email exist
                 include '../connection/connection.php';
                 $query2 = "select * from users_registration where user_email = '{$keyword}'";
                 $result2 = mysqli_query($conn, $query2);
                 if(mysqli_num_rows($result2)>0){
-                    $row2 = mysqli_fetch_assoc($result2);
-                    $output = "";
-                    $output.='<div>
-                        <a href="./chats.php?user_id='.$row2['unique_id'].'">
-                            <div class="flex flex-row">
-                                    <div class="w-10 h-10 border border-solid border-black">
-                                        <img src="./uploads/user_image/'. $row2['user_image'] . '"  alt="">
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <div>
-                                           <span>'.$row2['user_name'].'</span>
-                                        </div>
-                                        <div>
-                                            <p>This is a test message</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <i class="fas fa-circle"></i>
-                                    </div>
-                                </div>
-                        </a>
-                    </div>';
-                }
+                    $row2 = mysqli_fetch_assoc($result2);// keyword related all datas like image username etc will be used later to display user information
+
+                    //for showing dynamic message while searching with knowing who sends
+                    $query3 = "SELECT * FROM users_registration";
+                    $result3 = mysqli_query($conn, $query3);
+
+                        if(mysqli_num_rows($result3) == 1){
+                            $output .= "No users are available to chat";
+                        }
+                        else if(mysqli_num_rows($result3) > 0){
+                            while($row3 = mysqli_fetch_assoc($result3)){//all users data not only keyword related
+                                    $query4 = "SELECT * FROM messages WHERE (incoming_msg_id = {$row3['unique_id']} OR outgoing_msg_id = {$row3['unique_id']}) AND (outgoing_msg_id = {$outgoing_id} OR incoming_msg_id = {$outgoing_id}) ORDER BY msg_id DESC LIMIT 1";
+                                    $result4 = mysqli_query($conn, $query4);
+                                    $row4 = mysqli_fetch_assoc($result4);
+                                if(mysqli_num_rows($result4)>0){
+                                    $lastmsg = $row4['msg'];
+                                }
+                                else{
+                                    $lastmsg = "No message available";
+                                }
+
+                                (strlen($lastmsg)>28) ? $msg = substr($lastmsg, 0, 28).'....' : $msg = $lastmsg;
+                                ($outgoing_id == $row4['outgoing_msg_id']) ? $you = "You: " : $you = " ";
+
+
+                                $output = "";
+                                $output.='<div>
+                                            <a href="chats.php?user_id='.$row2['unique_id'].'">
+                                                <div class="flex flex-row">
+                                                        <div class="w-10 h-10 border border-solid border-black">
+                                                            <img src="./uploads/user_image/'. $row2['user_image'] . '"  alt="">
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <div>
+                                                            <span>'.$row2['user_name'].'</span>
+                                                            </div>
+                                                            <div>
+                                                                <p>'. $you . $msg .'</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <i class="fas fa-circle"></i>
+                                                        </div>
+                                                    </div>
+                                            </a>
+                                        </div>';
+                                }
+                            }//
+                    
+                    }
                }
                 break;
             }
@@ -48,6 +78,9 @@
         }
     }
 
+
+
+    //start
     $query = "select user_email from users_registration";
     $result = mysqli_query($conn, $query);
     $data = array();
@@ -57,17 +90,10 @@
         }
     }
     else{
-        echo "No data found";
+        echo "No user_email created till now";
     }
 
     $isfound = linearSearch($keyword, $data);
-    // if ($isfound == true) {
-    //     // Display all information related to the search key
-       
-    //     echo "Sacchai hota";
-    // } else {
-    //     // Search key not found
-    //     echo "Search key not found.";
-    // }
+
 
 ?>
