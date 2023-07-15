@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['unique_id'])){
+        header("location: ./user_dashboard.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

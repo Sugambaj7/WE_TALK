@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div>
-                                logout
+                                <a href="logout.php?logout_id=<?php echo $row['unique_id']?>">Logout</a>
                             </div>
                         </div>
                         <div>
