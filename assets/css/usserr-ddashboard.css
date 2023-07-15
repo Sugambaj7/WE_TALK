@@ -11,9 +11,9 @@
 #user-list::-webkit-scrollbar {
     width: 0px;
 }
-.fas{
+.Active.now{
     color:#468669;
 }
-.fas .offline{
+.Offline{
     color:#ccc;
 }

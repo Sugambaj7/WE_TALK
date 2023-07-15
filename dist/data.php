@@ -13,6 +13,7 @@
 
             (strlen($lastmsg)>28) ? $msg = substr($lastmsg, 0, 28).'....' : $msg = $lastmsg;
             ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = " ";
+            // ($row['status'] == "Offline ") ? $status = "offline" : $status = "online";
 
             $output.='<div>
                         <a href="chats.php?user_id='.$row['unique_id'].'">
@@ -28,7 +29,7 @@
                                             <p>'. $you . $msg .'</p>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="'.$row['status'].'">
                                         <i class="fas fa-circle"></i>
                                     </div>
                                 </div>

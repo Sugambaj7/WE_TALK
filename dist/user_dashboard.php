@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="../assets/css/user-dashboard.css">
+    <link rel="stylesheet" href="../assets/css/usserr-ddashboard.css">
     <link rel="stylesheet" href="./fonts-6/css/all.css">
     <script src="https://kit.fontawesome.com/e3a0095685.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
