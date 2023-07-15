@@ -26,7 +26,7 @@
                         </div>
                         <div class="flex flex-row">
                             <div>
-                                <a href="#">Edit</a>
+                                <a href="edit_msg.php?edit_msg_unique_id='.$row['msg_id'].'">Edit</a>
                             </div>
                             <div>
                                 |
