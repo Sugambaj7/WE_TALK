@@ -21,7 +21,8 @@
                     </div>
                     <div class="flex flex-col">
                         <div class="outgoing-text">
-                            <p class="py-2 px-5" >'.$row['msg'].'</p>
+                            <p class="py-2 px-5" >
+                            '.$row['msg'].'</p>
                         </div>
                         <div class="flex flex-row">
                             <div>
@@ -31,7 +32,7 @@
                                 |
                             </div>
                             <div>
-                                <a href="#">Delete</a>
+                                <a href="delete_msg.php?delete_msg_unique_id='.$row['msg_id'].'">Delete</a>
                             </div>
                         </div>
                     </div> 

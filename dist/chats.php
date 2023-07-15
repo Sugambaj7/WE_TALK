@@ -22,6 +22,7 @@
         $result = mysqli_query($conn, $query);
         if(mysqli_num_rows($result)>0){
             $row = mysqli_fetch_assoc($result);
+            $_SESSION['chat_garne_user_id'] = $row['unique_id'];
         }
     ?>
     <div class="whole-div flex flex-row">
