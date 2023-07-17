@@ -11,6 +11,7 @@
         $output .= "No users are available to chat";
     }
     else if(mysqli_num_rows($result) > 0){
+        $key = '2A2B2C';
        include "data.php";
     }
     echo $output;
