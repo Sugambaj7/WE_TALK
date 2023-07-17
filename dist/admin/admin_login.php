@@ -40,7 +40,7 @@
                                     <label for="">Password</label>
                                </div>
                                <div>
-                                    <input type="password" name = "user_pass" placeholder="Enter your password" class="pl-2 border border-black w-56 py-0.5">
+                                    <input type="password" name = "admin_password" placeholder="Enter your password" class="pl-2 border border-black w-56 py-0.5">
                                </div>
                             </div>
                             <div class="button bg-green-500 flex justify-center  my-0.5 mt-4" >
