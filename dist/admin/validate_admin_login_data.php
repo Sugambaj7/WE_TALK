@@ -1,5 +1,6 @@
 <?php
 
+include './connection/connection.php';
 $admin_username = mysqli_real_escape_string($conn, $_POST['admin_username']);
 $admin_password = mysqli_real_escape_string($conn, $_POST['admin_password']);
 
