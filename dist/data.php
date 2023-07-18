@@ -1,4 +1,5 @@
 <?php
+
         function aesDecrypt($encryptedlastmsg, $key)
         {
             $encryptedData = base64_decode($encryptedlastmsg);
@@ -22,7 +23,12 @@
             }
 
             (strlen($decryptedlastMsg)>28) ? $msg = substr($decryptedlastMsg, 0, 28).'....' : $msg = $decryptedlastMsg;
-            ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = " ";
+            if(!empty($row2['outgoing_msg_id'])){
+                ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = " ";
+            }
+            else{
+                $you = "You: ";
+            }
             // ($row['status'] == "Offline ") ? $status = "offline" : $status = "online";
 
             $output.='<div>

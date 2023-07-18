@@ -4,6 +4,7 @@
 
     
     $keyword = mysqli_real_escape_string($conn, $_POST['searchTerm']);
+    $self_email = $_SESSION['self_email'];
 
 
     function aesDecrypt($encryptedData, $key)
@@ -17,6 +18,7 @@
     }
 
     function linearSearch($keyword,$data){
+        $self_email = $_SESSION['self_email'];
         $outgoing_id = $_SESSION['unique_id'];//use for dynamic message viewing
         $found = false;
         for($i=0;$i<count($data);$i++){
@@ -24,6 +26,7 @@
                 $found = true;
                if($found == true){//verified that keyword email exist
                 include '../connection/connection.php';
+                //already excluded self
                 $query2 = "select * from users_registration where user_email = '{$keyword}'";
                 $result2 = mysqli_query($conn, $query2);
                 if(mysqli_num_rows($result2)>0){
@@ -35,6 +38,7 @@
                     $result3 = mysqli_query($conn, $query3);
 
                         if(mysqli_num_rows($result3)<1){
+                            $output="";
                             $output .= "No messages";
                         }
                         else if(mysqli_num_rows($result3) > 0){
@@ -46,9 +50,14 @@
                         else{
                             $lastmsg = "No message available";
                         }
-
-                                (strlen($decryptedMsg)>28) ? $msg = substr($decryptedMsg, 0, 28).'....' : $msg = $decryptedMsg;
+                                if(!empty($decryptedMsg) && !empty($row3['outgoing_msg_id'])){
+                                    (strlen($decryptedMsg)>28) ? $msg = substr($decryptedMsg, 0, 28).'....' : $msg = $decryptedMsg;
                                 ($outgoing_id == $row3['outgoing_msg_id']) ? $you = "You: " : $you = " ";
+                                }
+                                else{
+                                    $you = "You: ";
+                                    $msg = "No message available";
+                                }
 
 
                         $output = "";
@@ -66,7 +75,7 @@
                                                         <p>'. $you . $msg .'</p>
                                                     </div>
                                                 </div>
-                                                <div>
+                                                <div class="'.$row2['status'].'">
                                                     <i class="fas fa-circle"></i>
                                                 </div>
                                             </div>
@@ -77,8 +86,11 @@
                 break;
             }
         }
-        if($found == false){
-            echo "This user doesnot exitst";
+        if($self_email == $keyword){
+            echo "You cannot search yourself";
+        }
+        else if($found == false){
+            echo "The user doesnot exist";
         }
         else{
             echo $output;
@@ -88,7 +100,7 @@
 
 
     //start
-    $query = "select user_email from users_registration";
+    $query = "SELECT user_email from users_registration WHERE NOT user_email = '$self_email' ";
     $result = mysqli_query($conn, $query);
     $data = array();
     if(mysqli_num_rows($result)>0){

@@ -64,7 +64,11 @@
                                 </div>
                                 <div id="search-content" class=" flex flex-row">
                                     <div id="search-bar-div">
-                                        <input class="border border-solid border-black outline-none" type="text" placeholder="Enter a name to search">
+                                        <?php
+                                        //for excluding self from search
+                                         $_SESSION['self_email']  =  $row['user_email'];
+                                         ?>
+                                        <input id="keyword" class="border border-solid border-black outline-none" type="text" placeholder="Enter a name to search">
                                     </div>
                                     <div class="bg-green-400 flex justify-center items-center" id="search-btn">
                                         <button>

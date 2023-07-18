@@ -1,4 +1,4 @@
-const searchBar = document.querySelector("#search-bar-div input"),
+const searchBar = document.querySelector("#search-bar-div #keyword"),
   searchBtn = document.querySelector("#search-content #search-btn button");
 
 searchBtn.onclick = () => {

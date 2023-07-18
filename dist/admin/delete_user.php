@@ -52,20 +52,29 @@
                                 }
                             }
                             else{
-                                $user_datas[] ="No user data found";
+                                $user_datas = array();
                             }
                         ?>
+
 
                         <?php 
                         foreach($user_datas as $user_data){
                         ?>
                         <tr class="border-b border-solid border-black">
-                            <td class="border-r border-solid border-black"><?php echo $user_data['user_id'];?></td>
+                            <td class="border-r border-solid border-black">
+                                
+                                <?php 
+                                    echo $user_data['user_id'];
+                                ?>
+                            </td>
                             <td class="border-r border-solid border-black"><?php echo $user_data['user_email'];?></td>
                             <td class="delete-user">
-                                <form action="" method="POST">
-                                    <input type="text" hidden name="delete_user_email" value="<?php echo $row['delete_user_email']?>"/>
-                                    <input type="button" value="Delete">
+                                <div class="alert-admin">
+
+                                </div>
+                                <form action="./delete_user_process.php" method="POST">
+                                    <input type="hidden" name="delete_user_email" value="<?php echo $user_data['user_email']?>"/>
+                                    <input id="delete-btn" type="submit" value="Delete">
                                 </form>
                             </td>
                         </tr>
