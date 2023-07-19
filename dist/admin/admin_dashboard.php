@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_SESSION['admin_unique_id']) && empty($_SESSION['admin_unique_id'])){
+        header("location: ./admin_login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +31,7 @@
                             <input class="update_psw" type="button" value="Update Password">
                         </div>
                         <div>
-                            <a href="logout.php">Logout</a>
+                            <a href="./admin_logout.php">Logout</a>
                         </div>
                     </div>
                     <div class="content border border-solid border-black">

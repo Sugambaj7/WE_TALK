@@ -1,6 +1,7 @@
 const feedback = document.querySelector(".feedback");
 delete_user = document.querySelector(".delete_user");
 update_psw = document.querySelector(".update_psw");
+logout = document.querySelector(".logout");
 
 content = document.querySelector(".content");
 
