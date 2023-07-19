@@ -6,9 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-    echo "feedback hora";
-    ?>
-    <script src="./assets/js/feedback.js"></script>
+    
+    <div class="flex flex-col">
+        <div class="flex flex-col">
+            <div>
+                <h1 class="underline">Feedbacks</h1>
+            </div>
+            <div class="feedbacks">
+                <?php
+                    include './connection/connection.php';
+                    $query = "select * from feedback";
+                    $result = mysqli_query($conn, $query);
+                    if(mysqli_num_rows($result)>0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo $row['feedback'] . "<br>" . "from" . ": " . $row['user_email'] . "<br>" ."<br>";
+                        }
+                    }
+                    else{
+                         echo "No feedbacks till now";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
