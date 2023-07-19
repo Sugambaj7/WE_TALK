@@ -40,12 +40,16 @@
                             <div>
                                 <h1 class="text-2xl">Enter New Password</h1>
                             </div>
+
+                            <div class="err-txt">
+
+                            </div>
                             <div class="mt-5">
-                                <input class="border  border-black w-56 h-10 pl-2" type="password" name="updated-password" required>
+                                <input class="border  border-black w-56 h-10 pl-2" type="password" name="updated_password" required >
                             </div>
                             <div class="button mt-2">
-                                <input type="text" hidden name="update_user_email" value="<?php echo $row['user_email'] ?>">
-                                <input id="submit" class=" border border-black w-40 py-1" type="submit" value="Update">
+                                <input  type="text" hidden name="update_user_email" value="<?php echo $row['user_email']; ?>">
+                                <input id="submit-btn" class=" border border-black w-40 py-1" type="button" value="Update">
                             </div>
                         </div>
                     </form>
