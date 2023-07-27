@@ -11,6 +11,14 @@
 #user-list::-webkit-scrollbar {
     width: 0px;
 }
+.circle-div{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+}
 .Active.now{
     color:#468669;
 }

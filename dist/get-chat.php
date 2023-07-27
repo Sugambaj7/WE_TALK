@@ -37,14 +37,14 @@
                             <p class="py-2 px-5" >
                             '.$decryptedMsg.'</p>
                         </div>
-                        <div class="flex flex-row">
-                            <div>
+                        <div class="flex flex-row ml-2">
+                            <div class="text-xs">
                                 <a href="edit_msg.php?edit_msg_unique_id='.$row['msg_id'].'">Edit</a>
                             </div>
-                            <div>
+                            <div class="text-xs ml-1 mr-1">
                                 |
                             </div>
-                            <div>
+                            <div class="text-xs">
                                 <a href="delete_msg.php?delete_msg_unique_id='.$row['msg_id'].'">Delete</a>
                             </div>
                         </div>
@@ -56,8 +56,8 @@
                     $encrypted = $row['msg'];
                     $decryptedMsg = aesDecrypt($encrypted, $key);
                     $output .= ' <div class="flex flex-row ">
-                                    <div class="left-content flex justify-center items-center">
-                                        <img class="w-7 h-7 mx-auto my-auto rounded-full text-center" src="./uploads/user_image/'.$row['user_image'].'" alt="">
+                                    <div class="flex items-center h-8 w-8 mt-4 ml-2 border border-solid border-black rounded-full overflow-hidden">
+                                        <img class="w-7 h-7 mx-auto my-auto text-center" src="./uploads/user_image/'.$row['user_image'].'" alt="">
                                     </div>
                                     <div class="incoming-text">
                                         <p class="py-2 px-5" >'.$decryptedMsg.'</p>

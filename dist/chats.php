@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/e3a0095685.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../assets/css/chats.css">
+    <link rel="stylesheet" href="../assets/css/all_chats.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 </head>
 <body>
@@ -33,22 +33,22 @@
             <div class="border border-solid border-black" >
                <div>
                     <div class="user-chat-area flex flex-col ">
-                        <div class = "border-b-2 flex flex-row">
-                            <div>
+                        <div class = "border-b-2 mt-2 flex flex-row">
+                            <div class="ml-4 mr-2">
                                 <a href="./user_dashboard.php">
                                     <i class="fa-solid fa-arrow-left"></i>
                                 </a>
                             </div>
-                            <div>
-                               <img class="w-14 h-14 rounded-full" src="./uploads/user_image/<?php echo $row['user_image']?>" alt="" srcset="">
+                            <div class="flex items-center w-11 h-11 ml-4 border border-solid border-black rounded-full overflow-hidden">
+                               <img class="p-1 w-14 h-14" src="./uploads/user_image/<?php echo $row['user_image']?>" alt="" srcset="">
                             </div>
-                            <div class="flex flex-col">
-                                <div>
+                            <div class="flex flex-col ml-8 mr-32 mb-3">
+                                <div class="text-xl">
                                      <?php
                                         echo $row['user_name'];
                                      ?>
                                 </div>
-                                <div>
+                                <div class="text-xs">
                                     <?php
                                         echo $row['status'];
                                      ?>
@@ -61,14 +61,14 @@
                         <div>
                             <div class="mt-2 mb-2 ml-2 mr-2" >
                                 <div class="flex flex-row">
-                                    <div class="flex justify-center items-center">
+                                    <!-- <div class="flex justify-center items-center">
                                         <i class="fa-solid fa-circle-plus mx-auto my-auto pl-2 pr-2"></i>
-                                    </div>
+                                    </div> -->
                                     <div>
                                         <form action="" class="msg-textbox flex flex-row">
                                             <input type="text" hidden name="outgoing_id" value="<?php echo $_SESSION['unique_id'];?>" />
                                             <input type="text" hidden name="incoming_id" value="<?php echo $user_id;?>" />
-                                            <input class="input-field pt-1 pb-1 pl-4  border border-solid border-black" type="text" name="message" placeholder="Type a message here">
+                                            <input class="input-field w-72 pt-1 pb-1 pl-4  border border-solid border-black" type="text" name="message" placeholder="Type a message here">
                                             <div id="send-btn" class="flex justify-center items-center">
                                                 <button>
                                                     <i class="pl-2 pr-2 fa-solid fa-paper-plane mx-auto my-auto"></i>

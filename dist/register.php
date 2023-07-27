@@ -30,7 +30,7 @@
                                 <span> user your email for registration</span>
                             </div>
                             <div class="error-txt">
-                                This is an error message!
+                                
                             </div>
                         </div>
                         

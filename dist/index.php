@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="../assets/css/landingpage.css">
+    <link rel="stylesheet" href="../assets/css/landing_page.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="progress-bar-container">
-                <div class="progress-bar"></div>
+                <div class="progress-bar "></div>
             </div>
         </div>
         <div>

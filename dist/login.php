@@ -49,9 +49,6 @@
                             <div class="">
                                 <a class="underline text-blue-700" href="./register.php">Not signed up yet? Signup now</a>
                             </div>
-                            <div>
-                                <a class="underline text-blue-700" href="#">Forgot Password?</a>
-                            </div>
                         </form>
                     </div>
                 </div>
