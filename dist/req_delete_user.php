@@ -19,7 +19,7 @@ else if(!empty($delete_user_email)){
         $query = "insert into delete_user (delete_user_email,delete_status) values ('{$delete_user_email}','{$delete_status}')";
         $result = mysqli_query($conn, $query);
         if($result){
-            echo "You have have a request to delete account linked to" ." " . $delete_user_email . "<br>". "Your account will soon be deleted";
+            echo "You have requested to delete account linked to" ." " . $delete_user_email . "<br>". "Your account will soon be deleted";
         }
         else{
             echo "Error while deleting user";

@@ -41,9 +41,9 @@
                 <table class="border border-solid border-black">
                         <thead class="border-b border-solid border-black">
                             <tr>
-                                <th class="border-r border-solid border-black">Id</th>
-                                <th class="border-r border-solid border-black">User Email</th>
-                                <th>Update</th>
+                                <th class="p-2 border-r border-solid border-black">Id</th>
+                                <th class="p-2 border-r border-solid border-black">User Email</th>
+                                <th class="p-2" >Update</th>
                             </tr>
                         </thead>
 
@@ -52,8 +52,7 @@
                         foreach($update_psw_user_details as $update_psw_user_detail){
                         ?>
                         <tr class="border-b border-solid border-black">
-                            <td class="border-r border-solid border-black">
-                                
+                            <td class="p-2  border-r border-solid border-black">
                                 <?php 
                                     echo $update_psw_user_detail['id'];
                                 ?>
@@ -66,7 +65,7 @@
                                 <form action="./update_user_psw_process.php" method="POST">
                                     <input type="hidden" name="update_user_email" value="<?php echo $update_psw_user_detail['user_email']?>"/>
                                     <input type="hidden" name="new_password" value="<?php echo $update_psw_user_detail['new_password'] ?>"/>
-                                    <input id="update-btn" type="submit" value="Update">
+                                    <input class="p-2 bg-blue-400 rounded text-white" id="update-btn" type="submit" value="Update">
                                 </form>
                             </td>
                         </tr>
