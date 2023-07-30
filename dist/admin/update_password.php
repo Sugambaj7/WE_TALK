@@ -7,12 +7,12 @@
 </head>
 <body>
     
-    <div class="flex flex-col">
+    <div class="ml-4 mr-4 mb-4 mt-0 flex flex-col">
         <div class="flex flex-col">
             <div>
-                <h1>Password Update Requests</h1>
+                <h1 class="underline text-xl">Password Update Requests</h1>
             </div>
-            <div class="psw_account_request">
+            <div class="pt-1 psw_account_request">
                 <?php
                     include './connection/connection.php';
                     $password_update_status = true;
@@ -32,12 +32,12 @@
                 ?>
             </div>
         </div>
-        <div class ="flex flex-col">
+        <div class ="mt-4 flex flex-col">
             <div class ="flex flex-col">
                 <div>
-                    Users to update password
+                   <h1 class="mt-3 underline text-xl">Users to update password</h1> 
                 </div>
-                <div class="flex flex-col">
+                <div class="mt-3 flex flex-col">
                 <table class="border border-solid border-black">
                         <thead class="border-b border-solid border-black">
                             <tr>

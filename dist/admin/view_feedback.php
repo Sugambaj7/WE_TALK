@@ -7,10 +7,10 @@
 </head>
 <body>
     
-    <div class="flex flex-col">
+    <div class="flex flex-col m-4">
         <div class="flex flex-col">
-            <div>
-                <h1 class="underline">Feedbacks</h1>
+            <div class="mb-3">
+                <h1 class="underline text-xl">Feedbacks</h1>
             </div>
             <div class="feedbacks">
                 <?php

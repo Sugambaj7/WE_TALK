@@ -19,23 +19,23 @@
         </div>
         <div class="flex justify-center items-center w-screen h-screen ">
             <div class="flex flex-row border border-solid border-black ">
-                <div class="flex flex-row mt-10 mb-10 ml-10 mr-10">
-                    <div class="flex flex-col  border border-solid border-black">
-                        <div>
-                            <input class="feedback" type="button" value="View Feedback">
+                <div class="flex flex-row">
+                    <div class="pt-3 pb-5 pr-5 pl-3 flex flex-col border-r border-solid border-black">
+                        <div class="m-1">
+                            <input class="feedback p-2 bg-blue-400 rounded text-white" type="button" value="View Feedback">
                         </div>
-                        <div>
-                            <input class="delete_user" type="button" value="Delete User">
+                        <div class="m-1">
+                            <input class="delete_user p-2 bg-blue-400 rounded text-white" type="button" value="Delete User">
                         </div>
-                        <div>
-                            <input class="update_psw" type="button" value="Update Password">
+                        <div class="m-1 b">
+                            <input class="update_psw p-2 bg-blue-400 rounded text-white" type="button" value="Update Password">
                         </div>
-                        <div>
+                        <div class="m-1  p-2 bg-blue-400 rounded text-white">
                             <a href="./admin_logout.php">Logout</a>
                         </div>
                     </div>
-                    <div class="content border border-solid border-black">
-                        Welcome to Admin Dashboard
+                    <div class="flex justify-center items-center content  border-l-0 border-solid border-black">
+                        <h1 class="text-2xl ml-5 mr-5">Welcome to Admin Dashboard</h1>
                     </div>
                 </div>
             </div>
