@@ -85,6 +85,9 @@
                 </div>
                 <div class="flex flex-col border border-solid border-black">
                     <div class="ml-4 mr-4 mt-2">
+                    <div class="mb-1">
+                            <a href="update_profile.php">Update Profile</a>
+                        </div>
                         <div class="mb-1">
                             <a href="feedback.php">Feedback</a>
                         </div>
