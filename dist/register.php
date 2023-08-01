@@ -20,7 +20,7 @@
             <img src="../assets/images/we talk logo2.png"  height="100px" width="100px" alt="" srcset="">
         </div>
         <div class=" flex justify-center items-center w-screen h-screen">
-            <div class="signup border border-lid border-black" >
+            <div class="signup border border-l border-black" >
                 <form class="px-12 py-12"  name="user_register_form" method="POST" autocomplete="offgit" enctype="multipart/form-data">
                         <div class="flex flex-col justify-center items-center pb-8">
                             <div>

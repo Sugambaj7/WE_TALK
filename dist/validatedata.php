@@ -25,7 +25,7 @@ if(!empty($user_name) && !empty($user_phn_num)  && !empty($user_addr)  && !empty
             $image_explode = explode('.',$image_name);
             $image_ext = end($image_explode);
 
-            $extensions = ['png','jpeg','jpg'];
+            $extensions = ['png','jpeg','jpg','PNG','JPEG','JPG'];
             if(in_array($image_ext,$extensions) === true){
                 $time = time();
                 $new_image_name = $time.$image_name;

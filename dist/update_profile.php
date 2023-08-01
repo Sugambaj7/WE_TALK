@@ -35,67 +35,89 @@
             <img class="rounded-full" src="../assets/images/we talk logo2.png"  height="100px" width="100px" alt="" srcset="">
         </div>
         <div class=" flex justify-center items-center w-screen h-screen">
-            <div class="signup border border-lid border-black" >
-                <form class="px-12 py-12"  name="user_profile_update" method="POST" autocomplete="offgit" enctype="multipart/form-data">
-                        <div class="flex flex-col justify-center items-center pb-8">
-                            <div>
-                                <h1 class="underline text-2xl">Edit Your Details</h1>
+            <div class="update_form border border-l border-black" >
+                <div class="flex flex-col ml-10 mt-10 mb-10 mr-10">
+                    <div class="flex justify-center items-center mb-9">
+                        <div class="flex flex-col">
+                            <div class="flex justify-center items-center">
+                                <h1 class="underline text-2xl">Edit Your Profile</h1>
                             </div>
-
-                            <div class="error-txt">
+                            <div class="error-txt mt-2">
                                 
                             </div>
                         </div>
-                        
-                        <div>
-                            <div>
-                                <label for="" >Name <span class="star text-red-500">*</span></label>
-                            </div>
-                            <div>
-                                <input class="border  border-black w-56" type="text" name="update_user_name" required>
-                                <span class="error_msg" id="name_Err" ></span>
-                            </div>
+                    </div>
+                        <div class="update_name mb-2">
+                            <form action="" method="post">
+                                <div class="flex flex-row">
+                                    <div class="mr-1 w-28">
+                                        <label for="">Name</label>
+                                    </div>
+                                    <div class="ml-3">
+                                        <input class="border border-solid border-black w-56 h-8" name="update_user_name" type="text">
+                                    </div>
+                                    <div class="button ml-1">
+                                        <input type="button" class=" bg-blue-400 rounded text-white h-8 text-sm pl-2 pr-2" value="Update">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div>
-                            <div> 
-                                <label for="">Phone Number <span class="star text-red-500">*</span> </label>
-                            </div>
-                            <div>
-                                <input class="border  border-black w-56" type="text" name="update_user_phn_num" required>
-                                <span class="error_msg" id="phone_Err"></span>
-                            </div>
+                        <div class= "update_phone mb-2">
+                            <form action="" method="post">
+                                <div class="flex flex-row">
+                                    <div class="mr-1 w-28">
+                                        <label for="">Phone Number</label>
+                                    </div>
+                                    <div class="ml-3">
+                                        <input class="border border-solid border-black w-56 h-8" name="update_user_phn_num" type="text">
+                                    </div>
+                                    <div class="button ml-1">
+                                        <input type="button" class=" bg-blue-400 rounded text-white h-8 text-sm pl-2 pr-2" value="Update">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    
-                        <div>
-                            <div>
-                                <label for="">Address <span class="star text-red-500">*</span></label>
-                            </div>
-                            <div>
-                                <input class="border  border-black w-56" type="text" name="update_user_addr" required>
-                                <span class="error_msg" id="user_address_Err"></span>
-                            </div>
+                        <div class="update_addr mb-2">
+                            <form action="" method="post">
+                                <div class="flex flex-row">
+                                    <div class="mr-1 w-28">
+                                        <label for="">Address</label>
+                                    </div>
+                                    <div >
+                                        <input class="border border-solid border-black ml-3 w-56 h-8" name="update_user_addr" type="text">
+                                    </div>
+                                    <div class="button ml-1">
+                                        <input type="button" class=" bg-blue-400 rounded text-white h-8 text-sm pl-2 pr-2" value="Update">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        
-                        <div>
-                            <label for="">
-                                Update Profile Picture<span class="star text-red-500">*</span>
-                            </label>
+                        <div class="update_image">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <div class="flex flex-col">
+                                    <div class="mr-1">
+                                        <label for="">Select Image:</label>
+                                    </div>
+                                    <div class="flex flex-row mt-3">
+                                        <div class="w-80">
+                                            <input type="file" name="img_upload" >
+                                            <input type="hidden" name="old_img_name" value="<?php echo $row['user_image'];?>">
+                                        </div>
+                                        <div  class="button ml-1">
+                                            <input type="button" class="ml-8 bg-blue-400 rounded text-white h-8 text-sm pl-2 pr-2" value="Update">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div>
-                            <input type="file" name="img_upload" required>
-                            <span class="error_msg" id="user_image_Err"></span>
-                        </div>
-                        <div class="button mt-2">
-                            <input class=" border border-black w-56 py-0.5" type="submit" value="Update">
-                        </div>
-                </form>
+                    </div>
+                </div>
             </div>
-        </div>
         
         <div class="w-28">
         </div>
 
     </div>
-
+    <script src="./update_profile.js"></script>
 </body>
 </html>
