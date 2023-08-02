@@ -85,20 +85,23 @@
                 </div>
                 <div class="flex flex-col border border-solid border-black">
                     <div class="ml-4 mr-4 mt-2">
-                    <div class="mb-1">
+                        <div class=" flex justify-center items-center mb-2 bg-blue-400 rounded text-white h-8 text-sm ">
+                            <a href="your_profile.php">Your Profile</a>
+                        </div>
+                        <div class=" flex justify-center items-center mb-2 bg-blue-400 rounded text-white h-8 text-sm ">
                             <a href="update_profile.php">Update Profile</a>
                         </div>
-                        <div class="mb-1">
+                        <div class="flex justify-center items-center bg-blue-400 rounded text-white h-8 text-sm mb-2">
                             <a href="feedback.php">Feedback</a>
                         </div>
-                        <div class="mb-1">
-                            <a href="req_update_password.php">Update Password</a>
+                        <div class="flex justify-center items-center mb-2 bg-blue-400 rounded text-white h-8 text-sm ">
+                            <a class="pl-3 pr-3" href="req_update_password.php">Update Password</a>
                         </div>
                         <div class="delete-section">
                             <div class="flex flex-col">
                                 <div class="error-txt">
                                 </div>
-                                <div>
+                                <div class="flex justify-center items-center mb-2 bg-blue-400 rounded text-white h-8 text-sm ">
                                     <form action="" method="POST">
                                         <input type="text" hidden name="delete_user_email" value="<?php echo $row['user_email'];?>" />
                                         <input id="del-btn" type="button" value="Delete Account">
