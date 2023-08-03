@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="../assets/css/all_chats.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 </head>
+    <style>
+        body{
+            background-color: #F0F2F5;
+        }
+    </style>
 <body>
   <?php 
         include '../connection/connection.php';
@@ -30,7 +35,7 @@
             <img src="../assets/images/we talk logo2.png"  height="100px" width="100px" alt="" srcset="">
         </div>
         <div class=" flex justify-center items-center w-screen h-screen">
-            <div class="border border-solid border-black" >
+            <div class="bg-white border-2" >
                <div>
                     <div class="user-chat-area flex flex-col ">
                         <div class = "border-b-2 mt-2 flex flex-row">
@@ -39,7 +44,7 @@
                                     <i class="fa-solid fa-arrow-left"></i>
                                 </a>
                             </div>
-                            <div class="flex items-center w-11 h-11 ml-4 border border-solid border-black rounded-full overflow-hidden">
+                            <div class="flex items-center w-11 h-11 ml-4 border-2 rounded-full overflow-hidden">
                                <img class="p-1 w-14 h-14" src="./uploads/user_image/<?php echo $row['user_image']?>" alt="" srcset="">
                             </div>
                             <div class="flex flex-col ml-8 mr-32 mb-3">

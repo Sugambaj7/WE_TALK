@@ -31,7 +31,7 @@
             }
             // ($row['status'] == "Offline ") ? $status = "offline" : $status = "online";
 
-            $output.='<div class="ml-8 mt-2 mb-4">
+            $output.='<div class="ml-8 mt-2 mb-4 overflow-y-auto">
                         <a href="chats.php?user_id='.$row['unique_id'].'">
                             <div class="flex flex-row">
                                     <div class="flex items-center mt-1 border-2 rounded-full overflow-hidden">

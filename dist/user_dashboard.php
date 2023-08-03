@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="users-list" class="mt-4 mb-3 flex flex-col max-h-60 overflow-y-auto">
+                            <div id="users-list" class="mt-4 mb-3 flex flex-col max-h-60 ">
                                 
                             </div>
                         </div>

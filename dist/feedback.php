@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 </head>
+<style>
+        body{
+            background-color: #F0F2F5;
+        }
+</style>
 <body>
 <?php 
         include '../connection/connection.php';
@@ -33,7 +38,7 @@
         </div>
         
         <div class="flex justify-center items-center w-screen h-screen">
-            <div class="border border-lid border-black">
+            <div class="border-lid border-2 bg-white rounded-md">
                 <div class="my-form mt-10 mb-10 mr-10 ml-10">
                     <form action="" method="POST" >
                         <div class="flex flex-col justify-center items-center">
@@ -49,7 +54,7 @@
                             </div>
                             <div class="button mt-2">
                                 <input  type="text" hidden name="self_user_email" value="<?php echo $row['user_email']; ?>">
-                                <input id="send-btn" class=" border border-black w-40 py-1" type="button" value="Send">
+                                <input  id="send-btn" class="bg-blue-400 w-40 py-1 text-white" type="button" value="Send">
                             </div>
                         </div>
                     </form>

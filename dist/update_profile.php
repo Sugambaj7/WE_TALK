@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="./fonts-6/css/all.css">
     <script src="https://kit.fontawesome.com/e3a0095685.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+        body{
+            background-color: #F0F2F5;
+        }
+    </style>
 </head>
 <body>
     <?php 
@@ -35,7 +40,7 @@
             <img class="rounded-full" src="../assets/images/we talk logo2.png"  height="100px" width="100px" alt="" srcset="">
         </div>
         <div class=" flex justify-center items-center w-screen h-screen">
-            <div class="update_form border border-l border-black" >
+            <div class="update_form border-l border-2 rounded-md bg-white " >
                 <div class="flex flex-col ml-10 mt-10 mb-10 mr-10">
                     <div class="flex justify-center items-center mb-9">
                         <div class="flex flex-col">

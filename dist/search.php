@@ -61,10 +61,10 @@
 
 
                         $output = "";
-                        $output.='<div class="ml-2.5 mt-2 mb-1">
+                        $output.='<div class="ml-8 mt-2 mb-1">
                                     <a href="chats.php?user_id='.$row2['unique_id'].'">
                                         <div class="flex flex-row">
-                                                <div class="flex items-center w-11 h-11 mt-1 border border-solid border-black rounded-full overflow-hidden">
+                                                <div class="flex items-center w-11 h-11 mt-1 border-2 rounded-full overflow-hidden">
                                                     <img  class="p-1"  src="./uploads/user_image/'. $row2['user_image'] . '"  alt="">
                                                 </div>
                                                 <div class="flex flex-col ml-4">

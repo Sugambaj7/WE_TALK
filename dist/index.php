@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="../assets/css/landing_page.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+        body{
+            background-color: #F0F2F5;
+        }
+    </style>
 </head>
 <body>
     <div class="whole-div flex flex-row justify-center items-center">

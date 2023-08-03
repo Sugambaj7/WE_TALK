@@ -6,6 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+        body{
+            background-color: #F0F2F5;
+        }
+    </style>
 </head>
 <body>
     <div  class="whole-div flex flex-row">
@@ -17,7 +22,7 @@
                 <div class="flex justify-center items-center mb-8" >
                     <img src="../assets/images/we talk logo2.png"  height="100px" width="100px" alt="" srcset="">
                 </div>
-                <div class="login border border-lid border-black" >
+                <div class="login border-lid border-2 rounded-md bg-white" >
                     <div>
                         <form class="px-12 py-12"  name="user_login_form" method="POST" autocomplete="off" enctype="multipart/form-data">
                             <div>
