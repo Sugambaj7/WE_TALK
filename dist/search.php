@@ -102,7 +102,7 @@
 
 
     //start
-    $query = "SELECT user_email from users_registration WHERE NOT user_email = '$self_email' ";
+    $query = "SELECT user_email from users_registration WHERE NOT user_email = '$self_email' AND delete_status = false";
     $result = mysqli_query($conn, $query);
     $data = array();
     if(mysqli_num_rows($result)>0){

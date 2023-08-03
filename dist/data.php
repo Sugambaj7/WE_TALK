@@ -31,11 +31,11 @@
             }
             // ($row['status'] == "Offline ") ? $status = "offline" : $status = "online";
 
-            $output.='<div class="ml-2.5 mt-2 mb-1">
+            $output.='<div class="ml-8 mt-2 mb-4">
                         <a href="chats.php?user_id='.$row['unique_id'].'">
                             <div class="flex flex-row">
-                                    <div class="flex items-center w-11 h-11 mt-1 border border-solid border-black rounded-full overflow-hidden">
-                                        <img class="p-1" src="./uploads/user_image/'. $row['user_image'] . '"  alt="">
+                                    <div class="flex items-center mt-1 border-2 rounded-full overflow-hidden">
+                                        <img class="w-11 h-11" src="./uploads/user_image/'. $row['user_image'] . '"  alt="">
                                     </div>
                                     <div class="flex flex-col ml-4">
                                         <div>

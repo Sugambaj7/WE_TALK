@@ -13,13 +13,21 @@ else if(!empty($delete_user_email)){
     $query2 = "SELECT * FROM delete_user WHERE delete_user_email = '{$delete_user_email}'";
     $result2 = mysqli_query($conn, $query2);
     if(mysqli_num_rows($result2)>0){
-        echo "You have already requested to delete account linked to". " " . $delete_user_email . "<br>". "Your account will soon be deleted! ";
+        echo "You have already requested to delete account linked to". " " . $delete_user_email ."Your account will soon be deleted! ";
+        session_unset();
+        session_destroy();
     }
     else{
         $query = "insert into delete_user (delete_user_email,delete_status) values ('{$delete_user_email}','{$delete_status}')";
         $result = mysqli_query($conn, $query);
         if($result){
-            echo "You have requested to delete account linked to" ." " . $delete_user_email . "<br>". "Your account will soon be deleted";
+            $query3 = "UPDATE users_registration SET delete_status = '{$delete_status}' WHERE user_email = '{$delete_user_email}'";
+            $result3 = mysqli_query($conn, $query3);
+            if($result3){
+                echo "You have requested to delete account linked to" ." " . $delete_user_email . "Your account will soon be deleted";
+                session_unset();
+                session_destroy();
+            }
         }
         else{
             echo "Error while deleting user";

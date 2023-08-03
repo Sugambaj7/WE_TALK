@@ -39,7 +39,7 @@
                 <div class="border-b border-solid border-black">
                     <div class="flex flex-row m-3">
                         <div class="border border-solid border-black rounded-full overflow-hidden">
-                            <img class="p-2 w-14 h-14"  src="./uploads/user_image/<?php echo $row["user_image"]?>" alt="" srcset="">
+                            <img class="w-14 h-14"  src="./uploads/user_image/<?php echo $row["user_image"]?>" alt="" srcset="">
                         </div>
                         <div class="flex justify-center items-center ml-5 mr-10">
                             <h1 class="text-2xl"><?php echo $row['user_name']."'s" ?> Profile</h1>

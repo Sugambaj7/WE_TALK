@@ -12,10 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="../assets/css/my_user_dashboard.css">
+    <link rel="stylesheet" href="../assets/css/my_user_dashboard_yes.css">
     <link rel="stylesheet" href="./fonts-6/css/all.css">
     <script src="https://kit.fontawesome.com/e3a0095685.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+        body{
+            background-color: #F0F2F5;
+        }
+    </style>
 </head>
 <body>
     <?php 
@@ -36,12 +41,12 @@
         </div>
         <div class=" flex justify-center items-center w-screen h-screen">
             <div class="flex flex-row">
-                <div class="border border-solid border-black" >
+                <div class="border-2 rounded-l-md bg-white" >
                     <div class="user_dashboard">
                         <div class="site-users flex flex-col">
-                            <div class="flex flex-row mt-3 ml-3 mb-1">
-                                <div class="border border-solid border-black rounded-full overflow-hidden">
-                                    <img class="p-2 w-14 h-14"  src="./uploads/user_image/<?php echo $row["user_image"]?>" alt="" srcset="">
+                            <div class="flex flex-row mt-4 ml-8 mb-4 mr-8">
+                                <div class="border-2 rounded-full overflow-hidden">
+                                    <img class=" w-14 h-14"  src="./uploads/user_image/<?php echo $row["user_image"]?>" alt="" srcset="">
                                 </div>
                                 <div class="flex flex-col ml-8">
                                     <div>
@@ -55,14 +60,14 @@
                                     <a href="logout.php?logout_id=<?php echo $row['unique_id']?>">Logout</a>
                                 </div>
                             </div>
-                            <div>
-                                ______________________________________________________
+                            <div class = "border-b-2">
+                                
                             </div>
                             <div class="flex flex-col">
-                                <div class="ml-3">
+                                <div class="ml-8 mt-2">
                                     Select or Search user to start a chat
                                 </div>
-                                <div id="search-content" class=" flex flex-row mt-3 ml-2 mr-3">
+                                <div id="search-content" class=" flex flex-row mt-3 ml-8 mr-3">
                                     <div id="search-bar-div">
                                         <?php
                                         //for excluding self from search
@@ -83,8 +88,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col border border-solid border-black">
-                    <div class="ml-4 mr-4 mt-2">
+                <div class="flex flex-col border-t-2 border-b-2 border-r-2 rounded-r-md bg-white">
+                    <div class="ml-4 mr-4 mt-5">
                         <div class=" flex justify-center items-center mb-2 bg-blue-400 rounded text-white h-8 text-sm ">
                             <a href="your_profile.php">Your Profile</a>
                         </div>

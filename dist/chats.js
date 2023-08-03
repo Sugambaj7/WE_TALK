@@ -14,6 +14,7 @@ sendBtn.onclick = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         inputField.value = "";
+        scrllToButtom();
       }
     }
   };
@@ -23,7 +24,12 @@ sendBtn.onclick = () => {
   xhr.send(formData);
   // console.log("Hello");
 };
-
+chatBox.onmouseenter = () => {
+  chatBox.classList.add("active");
+};
+chatBox.onmouseleave = () => {
+  chatBox.classList.remove("active");
+};
 setInterval(() => {
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "./get-chat.php", true);
@@ -32,6 +38,9 @@ setInterval(() => {
       if (xhr.status === 200) {
         let data = xhr.response;
         chatBox.innerHTML = data;
+        if (!chatBox.classList.contains("active")) {
+          scrllToButtom();
+        }
       }
     }
   };
@@ -39,3 +48,7 @@ setInterval(() => {
   let formData = new FormData(form);
   xhr.send(formData);
 }, 500);
+
+function scrllToButtom() {
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
