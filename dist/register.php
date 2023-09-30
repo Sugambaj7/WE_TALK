@@ -29,67 +29,67 @@
                 <form class="px-12 py-12"  name="user_register_form" method="POST" autocomplete="offgit" enctype="multipart/form-data">
                         <div class="flex flex-col justify-center items-center pb-8">
                             <div>
-                                <h1 class="underline">Create Account</h1>
+                                <h1 class="underline text-xl">Create Account</h1>
                             </div>
                             <div>
                                 <span> user your email for registration</span>
                             </div>
-                            <div class="error-txt">
+                            <div class="error-txt text-red-500 text-sm pt-1">
                                 
                             </div>
                         </div>
                         
-                        <div>
-                            <div>
-                                <label for="" >Name <span class="star text-red-500">*</span></label>
+                        <div class="mb-2">
+                            <div class="mb-0.5">
+                                <label class="text-lg" for="" >Name <span class="star text-red-500">*</span></label>
                             </div>
                             <div>
-                                <input class="border  border-black w-56" type="text" name="user_name" required>
-                                <span class="error_msg" id="name_Err" ></span>
+                                <input class="pl-3 border  border-black w-56" type="text" name="user_name" required>
+                                <div class="name_Err text-red-500 text-sm"></div>
                             </div>
                         </div>
                         <div class="mt-1">
-                            <div> 
-                                <label for="">Phone Number <span class="star text-red-500">*</span> </label>
+                            <div class="mb-0.5"> 
+                                <label class="text-lg" for="">Phone Number <span class="star text-red-500">*</span> </label>
                             </div>
                             <div>
-                                <input class="border  border-black w-56" type="text" name="user_phn_num" required>
-                                <span class="error_msg" id="phone_Err"></span>
+                                <input class="border pl-3 border-black w-56" type="text" name="user_phn_num" required>
+                                <div class="phone_Err text-red-500 text-sm"></div>
                             </div>
                         </div>
                     
                         <div  class="mt-1">
-                            <div>
-                                <label for="">Address <span class="star text-red-500">*</span></label>
+                            <div class="mb-0.5">
+                                <label class="text-lg" for="">Address <span class="star text-red-500">*</span></label>
                             </div>
                             <div>
-                                <input class="border  border-black w-56" type="text" name="user_addr" required>
-                                <span class="error_msg" id="user_address_Err"></span>
-                            </div>
-                        </div>
-                        
-                        <div  class="mt-1">
-                            <div>
-                                <label for="">Email <span class="star text-red-500">*</span></label>
-                            </div>
-                            <div>
-                                <input class="border  border-black w-56" type="text" name="user_email" required>
-                                <span class="error_msg" id="email_Err"></span>
+                                <input class="border pl-3 border-black w-56" type="text" name="user_addr" required>
+                                <div class="address_Err text-red-500 text-sm"></div>
                             </div>
                         </div>
                         
                         <div  class="mt-1">
-                            <div>
-                                <label for="">Password <span class="star text-red-500">*</span></label>
+                            <div class="mb-0.5">
+                                <label class="text-lg" for="">Email <span class="star text-red-500">*</span></label>
                             </div>
                             <div>
-                                <input class="border  border-black w-56" type="password" name="user_pass" required>
-                                <span class="error_msg" id="password_Err"></span>
+                                <input class="border pl-3 border-black w-56" type="text" name="user_email" required>
+                                <div class="email_Err text-red-500 text-sm"></div>
                             </div>
                         </div>
                         
                         <div  class="mt-1">
-                            <label for="">
+                            <div class="mb-0.5">
+                                <label class="text-lg" for="">Password <span class="star text-red-500">*</span></label>
+                            </div>
+                            <div>
+                                <input class="border pl-3 border-black w-56" type="password" name="user_pass" required>
+                                <div class="password_Err text-red-500 text-sm"></div>
+                            </div>
+                        </div>
+                        
+                        <div  class="mt-1">
+                            <label class="text-lg" for="">
                                 Select Image<span class="star text-red-500">*</span>
                             </label>
                         </div>
